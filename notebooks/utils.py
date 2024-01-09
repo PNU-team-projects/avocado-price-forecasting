@@ -25,7 +25,7 @@ def tsplot(y, lags=20, figsize=(12, 7), style='bmh'):
         plot_pacf(y, lags=lags, ax=pacf_ax)
         plt.tight_layout()
 
-def predictions_plot(y_pred, y_true, data) :
+def predictions_plot(y_pred, y_true = pd.DataFrame(), data = pd.DataFrame()) :
     
     fig,ax = plt.subplots(nrows = 1,ncols = 1,figsize = (15,5))
 
@@ -35,5 +35,6 @@ def predictions_plot(y_pred, y_true, data) :
     plt.legend(loc="upper left")
     plt.show()
 
-    print(f'RMSE: {np.sqrt(mean_squared_error(y_true, y_pred))}')
-    print(f'R2: {r2_score(y_true, y_pred)}')
+    if(not y_true.empty):
+        print(f'RMSE: {np.sqrt(mean_squared_error(y_true, y_pred))}')
+        print(f'R2: {r2_score(y_true, y_pred)}')
