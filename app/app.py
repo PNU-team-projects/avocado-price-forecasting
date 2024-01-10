@@ -1,5 +1,8 @@
 import streamlit as st
 import pandas as pd
+import bz2
+
+
 
 data = pd.read_csv('app/train-data.csv')
 
