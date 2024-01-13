@@ -52,4 +52,4 @@ streamlit run run.py
 
 
 ## Preview 
-![Preview](app/screenshots/preview.png)
+![image](https://github.com/VladHolobyn/avocado-price-forecasting/assets/125756054/e4a4ab50-fd33-44fc-aec7-2a348e390b24)
